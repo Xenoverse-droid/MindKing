@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="style.css">
+    <title>MindKing</title>
+</head>
+
+<body>
+  <!--- MODAL LOGIN PAGE -->
+    <div class="modal">
+        <h1>Welcome to MindKing</h1>
+        <form action="">
+            <div class="input-container">
+                <label for="username">Enter username</label>
+                <input id="username" type="text" placeholder="Not more than 10characters">
+            </div>
+            <button class="savebtn" type="submit"">SAVE</button>
+        </form>
+    </div>
+
+
+    <!--- MAIN APPLICATION-->
+    <div class="container">
+        <div class="nav">
+            <p class="greeting">Welcome Samuel</p>
+            <div>
+                <input type="checkbox" id="toggle-input" class="checkbox">
+                <label for="toggle-input" class="toggle  js-toggle">on</label>
+            </div>
+        </div>
+        <div class="main-container">
+            <h1>Mind King 👑</h1>
+            <div class="select-container">
+                <label for="quote-type">Which type of quote do you prefer?</label>
+                <select name="quote-type" id="quote-type" class="js-quote">
+                    <option value="" hidden>Select one</option>
+                    <option value="biblical">Biblical</option>
+                    <option value="phylosophical">Phylosophical</option>
+                    <option value="Quoran Quotes">Quoran Quotes</option>
+                </select>
+            </div>
+            <div class="quote-container">
+                <p class="quote">We are what we repeatedly do. Excellence then, is not an act but a habit. <span
+                        class="autor">~Aristotle</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

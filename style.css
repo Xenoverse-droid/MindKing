@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+select {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin-bottom: 2rem;
+}
+
+p {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+label {
+    font-size: 2.4rem;
+}
+
+span {
+    font-weight: 700;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container, .main-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: none;
+    padding: 3rem;
+    animation-name: reveal;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+.main-container {
+    max-width: 40rem;
+    align-items: center;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 2rem;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.greeting {
+    font-size: 3rem;
+    justify-self: center;
+    align-self: flex-start;
+}
+
+.toggle {
+    color: #ffffff00;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 7rem;
+    height: 3.5rem;
+    display: inline-block;
+    background: #a6a5a5;
+    border-radius: 4rem;
+    position: relative;
+    user-select: none;
+}
+
+.checkbox {
+    visibility: hidden;
+}
+
+.toggle::after {
+    position: absolute;
+    content:"";
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 3rem;
+    left: 0.5rem;
+    top: 15%;
+    display: inline-block;
+    background-color: #000;
+    transition: 0.5s;
+}
+
+.checkbox:checked + .toggle::after {
+    background-color: #fff;
+    left: 1.5rem;
+    transform: translateX(100%);
+}
+
+.checkbox:checked + .toggle {
+    box-shadow: inset 0 5px 5px #000;
+    background-color: #413b3b;
+}
+
+
+/*-----------MODAL STYLING-------*/
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 40rem;
+    width: 90%;
+}
+
+.input-container {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.input-container input {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+}
+.modal label {
+    font-size: 2rem;
+}
+
+.modal h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.modal button {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    width: 100%;
+    color: #fff;
+    background-color: #000;
+}
+
+
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
