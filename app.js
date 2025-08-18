@@ -3,7 +3,7 @@ const greeting = document.querySelector('.greeting');
 const quoteType = document.querySelector('.js-quote');
 const quoteOptions = document.querySelector('option');
 const quote = document.querySelector('.quote');
-const author = document.querySelector('.autor');
+const author = document.querySelector('.author');
 const toggleBtn = document.querySelector('.checkbox');
 const toggle = document.querySelector('.toggle')
 const modalForm = document.querySelector('.modal');
@@ -85,3 +85,126 @@ function darkMode() {
     document.body.style.color = '#fff';
     document.body.style.backgroundColor = '#000';
 }
+
+
+
+let intervalId;
+function getQuoteType() {
+    if (quoteType.value === 'biblical') {
+        clearInterval(intervalId); 
+        let result = quotes.filter(quote => {
+            return quote.biblical
+        }).map(item => {
+            return item.biblical
+        })
+        let i = 0
+        intervalId =  setInterval(() => {
+            quote.innerHTML = `${result[i].quote}<br> <span class='author'>${result[i].author}<span>`;
+            i ++;
+            if (i === result.length) {
+                i = 0;
+            }
+        }, 3000);
+    } else if (quoteType.value === 'quran') {
+        clearInterval(intervalId); 
+        let result = quotes.filter(quote => {
+            return quote.quran
+        }).map(item => {
+            return item.quran
+        })
+        let i = 0
+        intervalId =  setInterval(() => {
+            quote.innerHTML = `${result[i].quote}<br> <span class='author'>${result[i].author}<span>`;
+            i ++;
+            if (i === result.length) {
+                i = 0;
+            }
+        }, 3000);
+    } else if (quoteType.value === 'phylosophical') {
+        clearInterval(intervalId); 
+        let result = quotes.filter(quote => {
+            return quote.phylosophical
+        }).map(item => {
+            return item.phylosophical
+        })
+        let i = 0
+        intervalId =  setInterval(() => {
+            quote.innerHTML = `${result[i].quote}<br> <span class='author'>${result[i].author}<span>`;
+            i ++;
+            if (i === result.length) {
+                i = 0;
+            }
+        }, 3000);
+    }
+}
+
+
+quoteType.addEventListener('change', ()=>{
+    getQuoteType();
+})
+
+
+
+
+
+
+
+
+
+// hard coded quotes --- would soon change when i integrate Ai to this.
+const quotes = [
+    {
+        phylosophical: {
+            quote: 'Do not pray for an easy life, pray for the strength to endure a difficult one.',
+            author: '~Bruce Lee',
+        }
+    },
+    {
+        phylosophical: {
+            quote: 'He who has a why to live can bear almost any how.',
+            author: '~Friedrich Nietzsche',
+        }
+    },
+    {
+        phylosophical: {
+            quote: 'Happiness depends upon ourselves.',
+            author: '~Aristotle',
+        }
+    },
+    {
+        biblical: {
+            quote: 'I can do all things through Christ who strengthens me.',
+            author: '~Philippians 4:13',
+        }
+    },
+    {
+        biblical: {
+            quote: 'For God has not given us a spirit of fear, but of power and of love and of a sound mind.',
+            author: '~2 Timothy 1:7',
+        }
+    },
+    {
+        biblical: {
+            quote: 'The Lord is my shepherd; I shall not want.',
+            author: '~ Psalm 23:1',
+        }
+    },
+    {
+        quran: {
+            quote: 'Indeed, with hardship comes ease.',
+            author: '~ Surah Ash-Sharh (94:6)',
+        }
+    },
+    {
+        quran: {
+            quote: 'And He found you lost and guided [you].',
+            author: '~ Surah Ad-Duhaa (93:7)',
+        }
+    },
+    {
+        quran: {
+            quote: 'Indeed, Allah does not burden a soul beyond that it can bear.',
+            author: '~ Surah Al-Baqarah (2:286)',
+        }
+    }
+]
