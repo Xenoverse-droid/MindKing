@@ -179,3 +179,10 @@ span {
         opacity: 1;
     }
 }
+
+
+@media (max-width:62.5rem) {
+    html {
+        font-size: 40%;
+    }
+}
