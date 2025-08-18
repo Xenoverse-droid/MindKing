@@ -1,0 +1,2 @@
+# MindKing
+Motivational Quote generator
