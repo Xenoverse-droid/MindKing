@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-10XS95D5XQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-10XS95D5XQ');
+    </script>
     <link rel="icon" href="">
     <link rel="stylesheet" href="style.css">
     <title>MindKing</title>
 </head>
 
 <body>
-  <!--- MODAL LOGIN PAGE -->
+    <!--- MODAL LOGIN PAGE -->
     <div class="modal">
         <h1>Welcome to MindKing</h1>
         <form action="">
@@ -23,30 +33,30 @@
 
 
     <!--- MAIN APPLICATION-->
-    <div class="container">
-        <div class="nav">
-            <p class="greeting">Welcome Samuel</p>
-            <div>
-                <input type="checkbox" id="toggle-input" class="checkbox">
-                <label for="toggle-input" class="toggle  js-toggle">on</label>
-            </div>
-        </div>
-        <div class="main-container">
-            <h1>Mind King 👑</h1>
-            <div class="select-container">
-                <label for="quote-type">Which type of quote do you prefer?</label>
-                <select name="quote-type" id="quote-type" class="js-quote">
-                    <option value="" hidden>Select one</option>
-                    <option value="biblical">Biblical</option>
-                    <option value="phylosophical">Phylosophical</option>
-                    <option value="quran">Quran Quotes</option>
-                </select>
-            </div>
-            <div class="quote-container">
-                <p class="quote">We are what we repeatedly do. Excellence then, is not an act but a habit. <span
-                        class="author">~Aristotle</span></p>
-            </div>
-        </div>
+    <div class=" container">
+                <div class="nav">
+                    <p class="greeting">Welcome Samuel</p>
+                    <div>
+                        <input type="checkbox" id="toggle-input" class="checkbox">
+                        <label for="toggle-input" class="toggle  js-toggle">on</label>
+                    </div>
+                </div>
+                <div class="main-container">
+                    <h1>Mind King 👑</h1>
+                    <div class="select-container">
+                        <label for="quote-type">Which type of quote do you prefer?</label>
+                        <select name="quote-type" id="quote-type" class="js-quote">
+                            <option value="" hidden>Select one</option>
+                            <option value="biblical">Biblical</option>
+                            <option value="phylosophical">Phylosophical</option>
+                            <option value="quran">Quran Quotes</option>
+                        </select>
+                    </div>
+                    <div class="quote-container">
+                        <p class="quote">We are what we repeatedly do. Excellence then, is not an act but a habit. <span
+                                class="author">~Aristotle</span></p>
+                    </div>
+                </div>
     </div>
 
     <script src="app.js"></script>
