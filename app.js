@@ -71,6 +71,7 @@ if (localStorage.getItem('username')) {
 
 //stored the mode code inside fuctions for readability
 function lightmode() {
+    document.querySelector('.toggle').classList.remove('active');
     quoteType.style.color = '#fff'
     quoteType.style.backgroundColor = '#000'
     document.body.style.transition = 'ease-in 1'
@@ -79,6 +80,7 @@ function lightmode() {
 }
 
 function darkMode() {
+    document.querySelector('.toggle').classList.add('active');
     quoteType.style.color = '#000';
     quoteType.style.backgroundColor = '#fff';
     document.body.style.transition = 'ease-in 0.7s';
